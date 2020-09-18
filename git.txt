@@ -3,3 +3,9 @@ git 명령어
 **원격 저장소 추가**
 - git remote add <name> <url> - <name>은 등록명, <url>은 원격 저장소의 URL(git remote add origin <url>로 일단 쓰자)
 - 콘솔의 경우 push나 pull은 실행 시에 원격 저장소명을 생략하면, origin이라는 이름의 원격 저장소를 사용한다. 이 때문에 원격 저장소에는 origin이라는 이름을 붙이는 것이 일반적
+
+**commit/push 과정**
+1) git status - git 관리 하에 있는 폴더의 작업트리와 인덱스 상태 확인(untracked files이 보일 것 -> 인덱스에 등록하면 추적 대상으로 등록 됨)
+2) git add <파일명> - 파일을 인덱스에 등록하는 명령어(파일명 파라미터에 . 을 지정하면 모든 파일 인덱스에 등록, 여러 파일 한번에 지정하려면 한칸 띄어쓰기로 구분)
+3) git commit -m <설명> - commit 명령어 실행해 커밋 진행
+4) git push <repository> <refspec> - <repository>는 push 경로의 주소, <refspec>은 push 할 브랜치(git push origin master라고 일단 쓰자)
