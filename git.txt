@@ -9,3 +9,15 @@ git 명령어
 2) git add <파일명> - 파일을 인덱스에 등록하는 명령어(파일명 파라미터에 . 을 지정하면 모든 파일 인덱스에 등록, 여러 파일 한번에 지정하려면 한칸 띄어쓰기로 구분)
 3) git commit -m <설명> - commit 명령어 실행해 커밋 진행
 4) git push <repository> <refspec> - <repository>는 push 경로의 주소, <refspec>은 push 할 브랜치(git push origin master라고 일단 쓰자)
+
+**clone**
+- 원격 저장소의 파일을 복제해오는 것
+- git clone <repository> <directory> - <repository>는 원격 저장소의 URL, <directory>는 복제대상의 폴더명
+
+**pull**
+- 원격 저장소의 내용을 내PC로 가져오는 것
+- git pull <repository> <refspec> - <repository>는 pull 경로의 주소, <refspec>은 pull 할 브랜치(git pull origin master라고 일단 쓰자)
+
+**clone vs pull**
+- clone은 원격 서버 저장소를 로컬 머신에 복사, 주로 프로젝트를 처음 업로드할 때만 사용되고 그 후는 pull 하는 것이 좋다
+- pull은 다른 변경 사항이 로컬 컴퓨터에 추가, 내가 하고 있던 프로젝트의 최근 변경 사항을 원할 때 pull 할 수 있다
